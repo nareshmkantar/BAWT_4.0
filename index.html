@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BAWT - Budget Allocation Workflow Tool">
+  <title>BAWT - Budget Allocation Workflow Tool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <div class="sidebar-logo-icon">B</div>
+          <span class="sidebar-logo-text">BAWT</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-title">Main</div>
+          <div class="nav-item active" data-page="dashboard">
+            <span class="nav-item-icon">🏠</span>
+            <span class="nav-item-text">Home</span>
+          </div>
+          <div class="nav-item" data-page="view">
+            <span class="nav-item-icon">👁️</span>
+            <span class="nav-item-text">View</span>
+          </div>
+          <div class="nav-item" data-page="data">
+            <span class="nav-item-icon">📊</span>
+            <span class="nav-item-text">Data Manager</span>
+          </div>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-title">Tools</div>
+          <div class="nav-item" data-page="simulate">
+            <span class="nav-item-icon">🔮</span>
+            <span class="nav-item-text">Simulation</span>
+          </div>
+          <div class="nav-item" data-page="reallocate">
+            <span class="nav-item-icon">⚡</span>
+            <span class="nav-item-text">Optimization</span>
+          </div>
+          <div class="nav-item" data-page="compare">
+            <span class="nav-item-icon">⚖️</span>
+            <span class="nav-item-text">Compare</span>
+          </div>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-title">Reports</div>
+          <div class="nav-item" data-page="results">
+            <span class="nav-item-icon">📋</span>
+            <span class="nav-item-text">Results Manager</span>
+          </div>
+        </div>
+      </nav>
+      <div style="padding: var(--space-4); border-top: 1px solid var(--color-border);">
+        <div class="nav-item" id="settings-btn">
+          <span class="nav-item-icon">⚙️</span>
+          <span class="nav-item-text">Settings</span>
+        </div>
+        <div class="nav-item" id="logout-btn">
+          <span class="nav-item-icon">🚪</span>
+          <span class="nav-item-text">Logout</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <button class="btn btn-ghost" id="sidebar-toggle" title="Toggle Sidebar">☰</button>
+          <h1 class="header-title">Home</h1>
+        </div>
+        <div class="header-right">
+          <button class="btn btn-ghost" title="Notifications">🔔</button>
+          <button class="btn btn-ghost" title="Help">❓</button>
+          <div class="flex gap-2" style="margin-left: var(--space-4);">
+            <div
+              style="width: 32px; height: 32px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 12px; color: white;">
+              DU</div>
+            <div>
+              <div style="font-size: var(--font-size-sm); font-weight: 500;">Demo User</div>
+              <div style="font-size: var(--font-size-xs); color: var(--color-text-muted);">Manager</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="page-content" id="page-content">
+        <!-- Dynamic content loaded here -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Chart.js for interactive charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- Scripts - API first, then Components, then App -->
+  <script src="js/api.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+setting_name,setting_value,description,category
+objective_type,MaxRevenue,"Optimization objective: MaxRevenue or MinBudget",General
+target_kpi,value,"KPI to optimize: value, profit, sales, reach",General
+optimization_period_start,2024_wk1,"Start week for optimization window",General
+optimization_period_end,2025_wk52,"End week for optimization window",General
+total_budget_constraint,5000000,"Total budget cap across all curves",Budget
+budget_flex_percent,20,"Percentage flexibility allowed on total budget",Budget
+min_curve_spend_percent,5,"Minimum spend per curve as % of its baseline",Curve Rules
+max_curve_spend_percent,300,"Maximum spend per curve as % of its baseline",Curve Rules
+seasonality_enabled,true,"Whether to apply seasonality factors",Seasonality
+default_seasonality_factor,1.0,"Default weight when not specified",Seasonality
+kpi_value_scalar,1.0,"Scalar multiplier for Value KPI",KPI Scalars
+kpi_profit_scalar,0.35,"Profit margin percentage",KPI Scalars
+kpi_reach_scalar,1000,"Impressions to reach conversion factor",KPI Scalars
